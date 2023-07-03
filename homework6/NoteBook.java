@@ -1,57 +1,63 @@
 package homework6;
 
-public class NoteBook { 
-      private String model;
-    private Integer ram;
-    private Integer storage;
-    private String os;
-    private String color;
-    public NoteBook(String model, int ram, int storage, String os, String color) {
-        this.model = model;
+import java.util.*;
+
+public class Notebook{
+    private String name; 
+    private Integer ram; 
+    private Integer hd; 
+    private String os; 
+    private String color; 
+
+    //сеттеры-геттеры
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setRam(Integer ram) {
         this.ram = ram;
-        this.storage = storage;
-        this.os = os;
-        this.color = color;
     }
-    // Геттеры и сеттеры для полей
-    public String getModel() {
-        return model;
-    }
-    public void setModel(String model) {
-        this.model = model;
-    }
-    public int getRam() {
+    public Integer getRam() {
         return ram;
     }
-    public void setRam(int ram) {
-        this.ram = ram;
+    public void setHd(Integer hd) {
+        this.hd = hd;
     }
-    public int getStorage() {
-        return storage;
-    }
-    public void setStorage(int storage) {
-        this.storage = storage;
-    }
-    public String getOs() {
-        return os;
+    public Integer getHd() {
+        return hd;
     }
     public void setOs(String os) {
         this.os = os;
     }
-    public String getColor() {
-        return color;
+    public String getOs() {
+        return os;
     }
     public void setColor(String color) {
         this.color = color;
     }
+    public String getColor() {
+        return color;
+    }
+
+    // конструктор
+    public Notebook (String name, Integer ram, Integer hd, String os, String color){
+        this.name = name;
+        this.ram = ram;
+        this.hd = hd;
+        this.os = os;
+        this.color = color;
+    }
+
     @Override
     public String toString() {
-        return "NoteBook{" +
-                "model='" + model + '\'' +
-                ", ram=" + ram +
-                ", storage=" + storage +
-                ", os='" + os + '\'' +
-                ", color='" + color + '\'' +
-                '}';
+        return name + "; " +
+                "ОЗУ:" + ram +  "; " +
+                "Диск: " + hd + "; " +
+                "ОС: " + os + "; " +
+                "цвет:" + color + "; ";
     }
+    
+    
 }
